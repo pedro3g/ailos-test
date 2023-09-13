@@ -3,6 +3,7 @@
   padding: 0;
   outline: none;
   box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
 }
 
 :root {
@@ -18,4 +19,9 @@ body {
 
 .app-wrapper :nth-child(3) {
   flex: 1;
+}
+
+body {
+  background-color: var(--background);
+  font-family: 'Roboto', sans-serif;
 }
