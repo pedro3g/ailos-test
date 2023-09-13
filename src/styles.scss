@@ -1,3 +1,15 @@
+:root {
+  --primary: #165c7d;
+  --secondary: #ffffff;
+  --background: #e7eef1;
+
+  --text-primary: #101213;
+  --text-secondary: #787878;
+  --text-neutral: #4F575E;
+
+  --primary-hover: rgba(22, 92, 125, 0.1);
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,17 +18,10 @@
   font-family: 'Open Sans', sans-serif;
 }
 
-:root {
-  --primary: #165c7d;
-  --secondary: #ffffff;
-  --background: #e7eef1;
-
-  --primary-hover: rgba(22, 92, 125, 0.1);
-}
-
 html,
 body {
   height: 100%;
+  color: var(--text-primary)
 }
 
 .app-wrapper :nth-child(3) {

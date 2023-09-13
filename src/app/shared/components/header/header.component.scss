@@ -6,6 +6,17 @@ header {
   justify-content: space-between;
   padding: 1rem;
 
+  div:nth-child(1) {
+    h2 {
+      font-weight: 700;
+      font-family: 'Exo', 'Open Sans', sans-serif;
+    }
+
+    small {
+      color: var(--text-secondary);
+    }
+  }
+
   .actions {
     display: flex;
     align-items: center;
