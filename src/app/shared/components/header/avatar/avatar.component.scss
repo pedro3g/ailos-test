@@ -1,0 +1,25 @@
+.avatar-wrapper, .avatar-wrapper img {
+  border-radius: 50%;
+}
+
+.avatar-wrapper {
+  background-color: var(--primary);
+  padding: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  img {
+    width: 40px;
+  }
+
+  i {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    font-size: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+  }
+}
