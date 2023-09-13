@@ -1,0 +1,15 @@
+a {
+  all: unset;
+
+  &.outlined {
+    border: 1px solid var(--primary);
+    color: var(--primary);
+    font-weight: 600;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+  }
+
+  &.rounded {
+    border-radius: 1rem;
+  }
+}
