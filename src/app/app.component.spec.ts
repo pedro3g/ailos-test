@@ -1,10 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/components/navbar/navbar.component';
+import { AppRoutingModule } from './app-routing.module';
 
 describe('AppComponent', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
+      declarations: [AppComponent, NavbarComponent],
+      imports: [AppRoutingModule],
     })
   );
 
