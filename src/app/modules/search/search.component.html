@@ -44,4 +44,17 @@
       />
     </div>
   </main>
+  <footer>
+    <app-button
+      value="Iniciar nova admissão"
+      radius="square"
+      variant="filled"
+      *ngIf="!cpfControll.invalid"
+    />
+    <app-button
+      value="Dicas para admissão"
+      radius="square"
+      variant="outlined"
+    />
+  </footer>
 </div>
