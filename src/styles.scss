@@ -2,12 +2,17 @@
   --primary: #165c7d;
   --secondary: #ffffff;
   --background: #e7eef1;
+  --neutral: #C6CED1;
 
   --text-primary: #101213;
   --text-secondary: #787878;
+  --text-tertiary: #fff;
   --text-neutral: #4F575E;
 
   --primary-hover: rgba(22, 92, 125, 0.1);
+
+  --error-bg: rgb(251, 70, 70);
+  --error-text: white;
 }
 
 * {

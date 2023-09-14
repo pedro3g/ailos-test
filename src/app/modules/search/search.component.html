@@ -3,5 +3,58 @@
     title="NOVA ADMISSÃO COOPERADO"
     subtitle="Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado"
   />
-  <p>search works!</p>
+  <main>
+    <div class="breadcumbs">
+      <app-breadcumb [breadcumbs]="breadcumbs" />
+    </div>
+    <h2>Informe o CPF do futuro cooperado (a)</h2>
+    <small
+      >Se necessário, você poderá duplicar uma conta existente ou pausar e
+      retomar este cadastro futuramente. Digite apenas os números (sem pontos ou
+      traços).
+    </small>
+    <form (ngSubmit)="onSubmit()">
+      <app-input
+        label="CPF"
+        id="cpf"
+        placeholder="000.000.000-00"
+        [mask]="mask"
+        [inputControl]="cpfControll"
+      />
+      <app-button
+        value="Consultar por CPF"
+        radius="square"
+        variant="filled"
+        horizontalPadding="large"
+        [disabled]="cpfControll.invalid"
+      />
+    </form>
+    <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+    <div class="cards" *ngIf="!cpfControll.invalid">
+      <app-register-status
+        [name]="client.register.name"
+        [situation]="client.register.situation"
+      />
+      <app-account-card
+        *ngFor="let account of client.accounts"
+        [accountType]="account.type"
+        [bank]="account.bank"
+        [accountNumber]="account.number"
+        [digit]="account.digit"
+      />
+    </div>
+  </main>
+  <footer>
+    <app-button
+      value="Iniciar nova admissão"
+      radius="square"
+      variant="filled"
+      *ngIf="!cpfControll.invalid"
+    />
+    <app-button
+      value="Dicas para admissão"
+      radius="square"
+      variant="outlined"
+    />
+  </footer>
 </div>

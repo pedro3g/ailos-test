@@ -1,0 +1,25 @@
+<div class="card">
+  <div class="card-header">
+    <b>Situação cadastral do CPF</b>
+    <small>Consulta na Receita Federal</small>
+  </div>
+  <div class="group">
+    <i class="fa-solid fa-user"></i>
+    <div>
+      <small>Nome</small>
+      <p>{{ name }}</p>
+    </div>
+  </div>
+  <div class="group">
+    <i
+      [ngClass]="{
+        'fa-regular fa-circle-check': true,
+        regular: situation === 'regular'
+      }"
+    ></i>
+    <div>
+      <small>Situação do CPF</small>
+      <p>{{ getSituation() }}</p>
+    </div>
+  </div>
+</div>

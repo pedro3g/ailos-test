@@ -1,5 +1,8 @@
-a {
+button {
   all: unset;
+  display: inline-block;
+  font-size: 14px;
+
 
   &.outlined {
     border: 1px solid var(--primary);
@@ -9,7 +12,32 @@ a {
     cursor: pointer;
   }
 
+  &.filled {
+    background-color: var(--primary);
+    color: var(--text-tertiary);
+    font-weight: 600;
+    padding: 0.25rem 1rem;
+    cursor: pointer;
+  }
+
   &.rounded {
     border-radius: 1rem;
+  }
+
+  &.square {
+    border-radius: 2px;
+  }
+
+  &.medium {
+    padding: 0.55rem 1rem;
+  }
+
+  &.padding-large {
+    padding: 0.55rem 1.5rem;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 }
