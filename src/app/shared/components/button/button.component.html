@@ -1,1 +1,1 @@
-<a [className]="[variant, radius].join(' ')">{{ value }}</a>
+<button [className]="getClasses()" [disabled]="disabled">{{ value }}</button>
