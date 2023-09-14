@@ -40,13 +40,13 @@ export class SearchComponent {
       {
         type: 'Conta aplicação',
         bank: 'Cooperativa Viacredi',
-        accountNumber: '557932',
+        number: '557932',
         digit: '4',
       },
       {
         type: 'Conta corrente',
         bank: 'Cooperativa Viacredi',
-        accountNumber: '778461',
+        number: '778461',
         digit: '8',
       },
     ],

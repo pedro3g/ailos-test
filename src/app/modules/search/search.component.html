@@ -30,8 +30,18 @@
       />
     </form>
     <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
-    <div class="cards">
-      <app-register-status [situation]="client.register.situation" />
+    <div class="cards" *ngIf="!cpfControll.invalid">
+      <app-register-status
+        [name]="client.register.name"
+        [situation]="client.register.situation"
+      />
+      <app-account-card
+        *ngFor="let account of client.accounts"
+        [accountType]="account.type"
+        [bank]="account.bank"
+        [accountNumber]="account.number"
+        [digit]="account.digit"
+      />
     </div>
   </main>
 </div>

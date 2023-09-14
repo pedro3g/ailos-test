@@ -14,6 +14,7 @@ import { InputComponent } from './shared/components/input/input.component';
 import { InputMaskModule } from '@ngneat/input-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterStatusComponent } from './modules/search/components/register-status/register-status.component';
+import { AccountCardComponent } from './modules/search/components/account-card/account-card.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RegisterStatusComponent } from './modules/search/components/register-st
     BreadcumbComponent,
     InputComponent,
     RegisterStatusComponent,
+    AccountCardComponent,
   ],
   imports: [
     BrowserModule,

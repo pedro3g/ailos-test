@@ -41,14 +41,19 @@
       p {
         font-size: 14px;
       }
+
+      a {
+        font-size: 14px;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        margin: .67rem 0;
+        display: block;
+      }
     }
 
     &:nth-child(2) i {
       color: var(--text-secondary);
-    }
-
-    &:nth-child(3) i.regular {
-      color: #00C246;
     }
   }
 }
