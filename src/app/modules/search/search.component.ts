@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { createMask } from '@ngneat/input-mask';
 import { cpf as cpfValidator } from 'cpf-cnpj-validator';
+import CooperatedService, {
+  Cooperated,
+} from 'src/app/core/services/cooperated.service';
 import { Breadcumb } from 'src/app/shared/components/breadcumb/breadcumb.component';
-import { Situation } from './components/register-status/register-status.component';
 
 @Component({
   selector: 'app-search',
@@ -30,32 +32,15 @@ export class SearchComponent implements OnInit {
     },
   ];
 
-  client = {
-    register: {
-      cpf: '',
-      name: 'Mariane de Souza Oliveira',
-      situation: 'regular' as Situation,
-    },
-    accounts: [
-      {
-        type: 'Conta aplicação',
-        bank: 'Cooperativa Viacredi',
-        number: '557932',
-        digit: '4',
-      },
-      {
-        type: 'Conta corrente',
-        bank: 'Cooperativa Viacredi',
-        number: '778461',
-        digit: '8',
-      },
-    ],
-  };
+  loadng: boolean = false;
+  cooperated: Cooperated | null = null;
 
   mask = createMask('999.999.999-99');
   cpfControll = new FormControl('');
 
   errorMessage: string | null = null;
+
+  constructor(private readonly cooperatedService: CooperatedService) {}
 
   ngOnInit(): void {
     this.cpfControll.setErrors({
@@ -82,15 +67,22 @@ export class SearchComponent implements OnInit {
       } else {
         this.errorMessage = null;
         this.cpfControll.setErrors(null);
-        this.client.register.cpf = cpf;
       }
     });
   }
 
-  onSubmit() {
+  async onSubmit() {
     if (this.cpfControll.invalid) {
       this.cpfControll.markAsTouched();
       return void 0;
     }
+
+    this.loadng = true;
+
+    this.cooperated = await this.cooperatedService.getCooperatedByCpf(
+      this.cpfControll.value as string
+    );
+
+    this.loadng = false;
   }
 }

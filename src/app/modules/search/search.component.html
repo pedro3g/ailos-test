@@ -28,15 +28,20 @@
         horizontalPadding="large"
         [disabled]="cpfControll.invalid"
       />
+      <div *ngIf="loadng">
+        <div class="spinner">
+          <i class="fa-solid fa-spinner"></i>
+        </div>
+      </div>
     </form>
     <p class="error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
-    <div class="cards" *ngIf="!cpfControll.invalid">
+    <div class="cards" *ngIf="!cpfControll.invalid && cooperated">
       <app-register-status
-        [name]="client.register.name"
-        [situation]="client.register.situation"
+        [name]="cooperated.register.name"
+        [situation]="cooperated.register.situation"
       />
       <app-account-card
-        *ngFor="let account of client.accounts"
+        *ngFor="let account of cooperated.accounts"
         [accountType]="account.type"
         [bank]="account.bank"
         [accountNumber]="account.number"
@@ -49,7 +54,7 @@
       value="Iniciar nova admissão"
       radius="square"
       variant="filled"
-      *ngIf="!cpfControll.invalid"
+      *ngIf="!cpfControll.invalid && cooperated"
     />
     <app-button
       value="Dicas para admissão"

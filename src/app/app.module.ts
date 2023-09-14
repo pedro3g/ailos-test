@@ -15,6 +15,7 @@ import { InputMaskModule } from '@ngneat/input-mask';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterStatusComponent } from './modules/search/components/register-status/register-status.component';
 import { AccountCardComponent } from './modules/search/components/account-card/account-card.component';
+import CooperatedService from './core/services/cooperated.service';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,7 @@ import { AccountCardComponent } from './modules/search/components/account-card/a
     ReactiveFormsModule,
     InputMaskModule,
   ],
-  providers: [],
+  providers: [CooperatedService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

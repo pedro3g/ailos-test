@@ -11,6 +11,7 @@ import { RegisterStatusComponent } from './components/register-status/register-s
 import { AccountCardComponent } from './components/account-card/account-card.component';
 import { InputMaskModule } from '@ngneat/input-mask';
 import { ReactiveFormsModule } from '@angular/forms';
+import CooperatedService from 'src/app/core/services/cooperated.service';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -30,6 +31,7 @@ describe('SearchComponent', () => {
         AccountCardComponent,
       ],
       imports: [ReactiveFormsModule, InputMaskModule],
+      providers: [CooperatedService],
     });
     fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
