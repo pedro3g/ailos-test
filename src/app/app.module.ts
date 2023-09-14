@@ -10,10 +10,31 @@ import { AvatarComponent } from './shared/components/header/avatar/avatar.compon
 import { ButtonComponent } from './shared/components/button/button.component';
 import { BadgeIconComponent } from './shared/components/badge-icon/badge-icon.component';
 import { BreadcumbComponent } from './shared/components/breadcumb/breadcumb.component';
+import { InputComponent } from './shared/components/input/input.component';
+import { InputMaskModule } from '@ngneat/input-mask';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RegisterStatusComponent } from './modules/search/components/register-status/register-status.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SearchComponent, HeaderComponent, AvatarComponent, ButtonComponent, BadgeIconComponent, BreadcumbComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    SearchComponent,
+    HeaderComponent,
+    AvatarComponent,
+    ButtonComponent,
+    BadgeIconComponent,
+    BreadcumbComponent,
+    InputComponent,
+    RegisterStatusComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    InputMaskModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
