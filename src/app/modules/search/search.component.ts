@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { createMask } from '@ngneat/input-mask';
 import { cpf as cpfValidator } from 'cpf-cnpj-validator';
@@ -10,7 +10,7 @@ import { Situation } from './components/register-status/register-status.componen
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.scss'],
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   breadcumbs: Breadcumb[] = [
     {
       label: 'Início',
@@ -57,7 +57,10 @@ export class SearchComponent {
 
   errorMessage: string | null = null;
 
-  constructor() {
+  ngOnInit(): void {
+    this.cpfControll.setErrors({
+      invalid: false,
+    });
     this.listenToFormControl();
   }
 

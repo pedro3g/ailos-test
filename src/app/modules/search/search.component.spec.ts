@@ -6,6 +6,11 @@ import { BadgeIconComponent } from 'src/app/shared/components/badge-icon/badge-i
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 import { AvatarComponent } from 'src/app/shared/components/header/avatar/avatar.component';
 import { BreadcumbComponent } from 'src/app/shared/components/breadcumb/breadcumb.component';
+import { InputComponent } from 'src/app/shared/components/input/input.component';
+import { RegisterStatusComponent } from './components/register-status/register-status.component';
+import { AccountCardComponent } from './components/account-card/account-card.component';
+import { InputMaskModule } from '@ngneat/input-mask';
+import { ReactiveFormsModule } from '@angular/forms';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -20,7 +25,11 @@ describe('SearchComponent', () => {
         ButtonComponent,
         AvatarComponent,
         BreadcumbComponent,
+        InputComponent,
+        RegisterStatusComponent,
+        AccountCardComponent,
       ],
+      imports: [ReactiveFormsModule, InputMaskModule],
     });
     fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
