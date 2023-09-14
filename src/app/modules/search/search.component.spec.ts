@@ -5,6 +5,7 @@ import { HeaderComponent } from 'src/app/shared/components/header/header.compone
 import { BadgeIconComponent } from 'src/app/shared/components/badge-icon/badge-icon.component';
 import { ButtonComponent } from 'src/app/shared/components/button/button.component';
 import { AvatarComponent } from 'src/app/shared/components/header/avatar/avatar.component';
+import { BreadcumbComponent } from 'src/app/shared/components/breadcumb/breadcumb.component';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -18,6 +19,7 @@ describe('SearchComponent', () => {
         BadgeIconComponent,
         ButtonComponent,
         AvatarComponent,
+        BreadcumbComponent,
       ],
     });
     fixture = TestBed.createComponent(SearchComponent);

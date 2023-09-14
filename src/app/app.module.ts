@@ -9,9 +9,10 @@ import { HeaderComponent } from './shared/components/header/header.component';
 import { AvatarComponent } from './shared/components/header/avatar/avatar.component';
 import { ButtonComponent } from './shared/components/button/button.component';
 import { BadgeIconComponent } from './shared/components/badge-icon/badge-icon.component';
+import { BreadcumbComponent } from './shared/components/breadcumb/breadcumb.component';
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, SearchComponent, HeaderComponent, AvatarComponent, ButtonComponent, BadgeIconComponent],
+  declarations: [AppComponent, NavbarComponent, SearchComponent, HeaderComponent, AvatarComponent, ButtonComponent, BadgeIconComponent, BreadcumbComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

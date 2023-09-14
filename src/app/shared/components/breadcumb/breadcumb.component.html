@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let item of breadcumbs" [ngClass]="{ active: item.active }">
+    <div class="circle-content">
+      <div class="line"></div>
+      <div class="circle"></div>
+      <div class="line"></div>
+    </div>
+    {{ item.label }}
+  </li>
+</ul>
