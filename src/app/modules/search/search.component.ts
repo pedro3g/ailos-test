@@ -53,6 +53,8 @@ export class SearchComponent implements OnInit {
     this.cpfControll.valueChanges.subscribe((value) => {
       const cpf = String(value).replace(/\D/g, '');
 
+      this.cooperated = null;
+
       if (!cpfValidator.isValid(String(cpf))) {
         if (cpf.length === 11) {
           this.errorMessage = 'O CPF informado é inválido';
