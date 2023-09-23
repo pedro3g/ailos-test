@@ -29,7 +29,7 @@ Após isso o projeto estará acessível em `http://localhost:5000`
 1. Tenha o `pnpm` e `serve` instalados com o comando
 
 ```
-npm i -g
+npm i -g pnpm serve
 ```
 
 2. Instale as dependências
